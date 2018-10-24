@@ -33,7 +33,7 @@ end
 
 # naming convention with _ would not work, it should be cardsTotal
 # total should be first of all set to 0
-# function exits the loop too early, the return statement should be outside of the first end 
+# function exits the loop too early, the return statement should be outside of the first end
 def self.cards_total(cards)
   total
   for card in cards
@@ -42,5 +42,5 @@ def self.cards_total(cards)
   end
 end
 
-
+# missing end of class
 ```
