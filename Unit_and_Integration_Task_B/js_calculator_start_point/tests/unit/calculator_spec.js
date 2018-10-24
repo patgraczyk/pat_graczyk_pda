@@ -40,15 +40,34 @@ describe('calculator', function () {
   })
 
   it('should concatenate multiple number button clicks', function(){
-    assert.equal(true,true)
+    calculator.previousTotal = 0
+    calculator.numberClick(3)
+    calculator.numberClick(4)
+    calculator.numberClick(5)
+    let actual = calculator.runningTotal;
+    assert.equal(actual, 345)
   })
 
   it('should chain multiple operations together', function(){
-    assert.equal(true,true)
+    calculator.previousTotal = 0
+    calculator.numberClick(3)
+    calculator.operatorClick('+')
+    calculator.numberClick(5)
+    calculator.operatorClick('=')
+    let actual = calculator.runningTotal;
+    assert.equal(actual, 8)
   })
 
   it('should clear the running total without affecting the calculation', function(){
-    assert.equal(true, true)
+    calculator.previousTotal = 0
+    calculator.numberClick(3)
+    calculator.operatorClick('+')
+    calculator.numberClick(5)
+    calculator.clearClick()
+    calculator.numberClick(5)
+    calculator.operatorClick('=')
+    let actual = calculator.runningTotal;
+    assert.equal(actual, 8)
   })
 
 });
