@@ -30,7 +30,7 @@ Calculator.prototype = {
     // the `newTotal` flag
 
     if (this.runningTotal == 0 || this.newTotal) {
-      this.runningTotal = '';
+      this.runningTotal = 'Error, not a number';
       this.newTotal = false;
     }
     // concatenate the clicked number to the running total
