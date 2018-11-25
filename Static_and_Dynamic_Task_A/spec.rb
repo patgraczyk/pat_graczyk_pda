@@ -24,13 +24,13 @@ class CardTest < MiniTest::Test
 
   def test_highest_card()
     actual = @game.highestCard(@card1, @card2)
-    assert_equal(@card1, actual)
+    assert_equal(@card2, actual)
   end
 
   def test_cards_total()
     cards = [@card1, @card2, @card3, @card4]
     actual = CardGame.cardsTotal(cards)
-    assert_equal("You have a total of 35", actual)
+    assert_equal("You have a total of34", actual)
   end
 
 end
