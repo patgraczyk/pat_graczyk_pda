@@ -20,7 +20,11 @@ Calculator.prototype = {
   },
 
   divide: function(number){
-    this.runningTotal = parseFloat(this.previousTotal) / parseFloat(number);
+    if (number === 0){
+      this.runningTotal = "Error, not a number";
+    } else {
+      this.runningTotal = parseFloat(this.previousTotal) / parseFloat(number);
+    }
   },
 
   numberClick: function(number) {
@@ -30,7 +34,7 @@ Calculator.prototype = {
     // the `newTotal` flag
 
     if (this.runningTotal == 0 || this.newTotal) {
-      this.runningTotal = 'Error, not a number';
+      this.runningTotal = '';
       this.newTotal = false;
     }
     // concatenate the clicked number to the running total
