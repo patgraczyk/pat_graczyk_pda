@@ -18,6 +18,7 @@ class CardGame
   end
 
 # it should be def not dif otherwise the function won't run
+# it should be highestCard for consistency 
 # it should have , seperating arguments
 # it should say return card1.name there is not such a thing as card in this function
 # it should probably return card2.name not only card 2

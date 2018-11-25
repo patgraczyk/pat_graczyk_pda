@@ -15,11 +15,11 @@ class CardGame
     end
   end
 
-  def highest_card(card1, card2)
+  def highestCard(card1, card2)
   if card1.value > card2.value
-    return card1.name
+    return card1
   else
-    card2.name
+    card2
   end
 end
 
@@ -29,8 +29,8 @@ def self.cardsTotal(cards)
   for card in cards
     total += card.value
   end
-  return "You have a total of" + total
+  return "You have a total of" + total.to_s
 end
 
 
-end 
+end
